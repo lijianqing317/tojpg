@@ -17,9 +17,9 @@ def resizeMethod(saveFileName,saveImageType):
                 if j.endswith('ppm'):
                     imageName,imageType = os.path.splitext(j)
                     image = im.open(path+'/'+j)
-                    out = image.resize((28,28),im.ANTIALIAS)
+                    out = image.resize((32,32),im.ANTIALIAS)
                     #image.save(save_path+'/%s.jpg'%imageName)
                     out.save(resize_save_path+'/%s%s'%(imageName,saveImageType))
                     # shutil.copy(path+'/'+j,pp+'/'+j)
-resizeMethod('test','.png')
+resizeMethod('resize','.png')
 
